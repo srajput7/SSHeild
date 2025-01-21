@@ -1,4 +1,4 @@
-# SSHeild 
+# SSHield 
 
 A simple bash script to audit and enhance SSH Configurations for better security.
 
@@ -9,5 +9,5 @@ A simple bash script to audit and enhance SSH Configurations for better security
 
 ## Usage
 ```bash
-./ssheild.sh
+./SSHield.sh
 
