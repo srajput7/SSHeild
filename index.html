@@ -31,24 +31,32 @@
             margin: auto;
         }
         h2 {
-            color: #ff6f61; /* Highlighted orange color */
+            color: #5dade2; /* Light blue highlight color */
         }
-        p, ul, ol, pre {
+        p, ul, ol {
             line-height: 1.8;
         }
-        pre {
-            background-color: #222;
-            padding: 10px;
-            border-radius: 8px;
-            color: #0f0; /* Green text for code */
-            font-family: monospace;
-        }
         a {
-            color: #ff6f61; /* Same orange color for links */
+            color: #5dade2; /* Same light blue color for links */
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .download-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 15px 30px;
+            background-color: #5dade2;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .download-button:hover {
+            background-color: #4a90d8;
         }
         footer {
             text-align: center;
@@ -70,10 +78,13 @@
 
         <h2>How to Use</h2>
         <ol>
-            <li>Download the script from the <a href="https://github.com/srajput7/SSHield">GitHub repository</a>.</li>
+            <li>Download the script from the button below.</li>
             <li>Make it executable using the command: <code>chmod +x SSHield.sh</code></li>
             <li>Run the script with: <code>./SSHield.sh</code></li>
         </ol>
+
+        <h2>Download</h2>
+        <a href="SSHield.sh" class="download-button" download>Download SSHield Script</a>
 
         <h2>Features</h2>
         <ul>
@@ -81,30 +92,6 @@
             <li>Verifies if password authentication is enabled.</li>
             <li>Ensures SSH Protocol 2 is used.</li>
         </ul>
-
-        <h2>Script Contents</h2>
-        <pre>
-        #!/bin/bash
-        # SecureShellCheck: SSH Security Audit Tool
-        echo "SecureShellCheck: Auditing SSH Configuration..."
-        CONFIG_FILE="/etc/ssh/sshd_config"
-        if grep -q "^PermitRootLogin yes" $CONFIG_FILE; then
-            echo "[WARNING] Root login is enabled. Disable it for better security."
-        else
-            echo "[OK] Root login is disabled."
-        fi
-        if grep -q "^PasswordAuthentication yes" $CONFIG_FILE; then
-            echo "[WARNING] Password authentication is enabled. Consider using key-based authentication."
-        else
-            echo "[OK] Password authentication is disabled."
-        fi
-        if grep -q "^Protocol 1" $CONFIG_FILE; then
-            echo "[WARNING] SSH Protocol 1 is outdated and insecure. Use Protocol 2."
-        else
-            echo "[OK] Using SSH Protocol 2."
-        fi
-        echo "Audit complete. Review the above findings."
-        </pre>
 
         <h2>Contribute</h2>
         <p>If you have ideas to improve SSHield, feel free to contribute by creating an issue or submitting a pull request on our <a href="https://github.com/your-username/SSHield">GitHub repository</a>.</p>
