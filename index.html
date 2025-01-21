@@ -75,6 +75,28 @@
         </ul>
         <h2>Script Contents</h2>
         <pre>
+        #!/bin/bash
+        # SecureShellCheck: SSH Security Audit Tool
+        echo "SecureShellCheck: Auditing SSH Configuration..."
+        CONFIG_FILE="/etc/ssh/sshd_config"
+        if grep -q "^PermitRootLogin yes" $CONFIG_FILE; then
+            echo "[WARNING] Root login is enabled. Disable it for better security."
+        else
+            echo "[OK] Root login is disabled."
+        fi
+        if grep -q "^PasswordAuthentication yes" $CONFIG_FILE; then
+            echo "[WARNING] Password authentication is enabled. Consider using key-based authentication."
+        else
+            echo "[OK] Password authentication is disabled."
+        fi
+        if grep -q "^Protocol 1" $CONFIG_FILE; then
+            echo "[WARNING] SSH Protocol 1 is outdated and insecure. Use Protocol 2."
+        else
+            echo "[OK] Using SSH Protocol 2."
+        fi
+        echo "Audit complete. Review the above findings."
+        </pre>
+
 
         <h2>Contribute</h2>
         <p>If you have ideas to improve SSHield, feel free to contribute by creating an issue or submitting a pull request on our <a href="https://github.com/your-username/SSHield">GitHub repository</a>.</p>
