@@ -84,7 +84,7 @@
         </ol>
 
         <h2>Download</h2>
-        <a href="SSHield.sh" class="download-button" download>Download SSHield Script</a>
+        <a href="data:text/plain;charset=utf-8,#!/bin/bash%0A%23SSHeild%3A%20SSH%20Security%20Audit%20Tool%0A%0Aecho%20%22SSH%3A%20Auditing%20SSH%20Configuration...%22%0ACONFIG_FILE%3D%22%2Fetc%2Fssh%2Fsshd_config%22%0A%0Aif%20grep%20-q%20%22%5EPermitRootLogin%20yes%22%20%24CONFIG_FILE%3B%20then%20%0A%20%20%20echo%20%22%5BWARNING%5D%20Root%20login%20is%20enabled.%20Disable%20it%20for%20better%20security.%22%0Aelse%20%0A%20%20%20echo%20%22%5BOK%5D%20Root%20login%20is%20disabled.%22%0Afi%0A%0Aif%20grep%20-q%20%22%5EPasswordAuthentication%20yes%22%20%24CONFIG_FILE%3B%20then%20%0A%20%20%20echo%20%22%5BWARNING%5D%20Password%20authentication%20is%20enabled.%20Consider%20using%20key-based%20authentication.%22%0Aelse%20%0A%20%20%20echo%20%22%5BOK%5D%20Password%20authentication%20is%20disabled.%22%0Afi%0A%0Aif%20grep%20-q%20%22%5EProtocol%201%22%20%24CONFIG_FILE%3B%20then%20%0A%20%20%20echo%20%22%5BWARNING%5D%20SSH%20Protocol%201%20is%20outdated%20and%20insecure.%20Use%20Protocol%202.%22%0Aelse%20%0A%20%20%20echo%20%22%5BOK%5D%20Using%20SSH%20Protocol%202.%22%0Afi%0A%0Aecho%20%22Audit%20complete.%20Review%20the%20above%20findings.%22" class="download-button" download="SSHield.sh">Download SSHield Script</a>
 
         <h2>Features</h2>
         <ul>
@@ -94,7 +94,7 @@
         </ul>
 
         <h2>Contribute</h2>
-        <p>If you have ideas to improve SSHield, feel free to contribute by creating an issue or submitting a pull request on our <a href="https://github.com/your-username/SSHield">GitHub repository</a>.</p>
+        <p>If you have ideas to improve SSHield, feel free to contribute by creating an issue or submitting a pull request on our <a href="https://github.com/srajput7/SSHield">GitHub repository</a>.</p>
     </main>
     <footer>
         <p>© 2025 SSHield Shayan Rajput</p>
