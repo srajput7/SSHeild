@@ -1,14 +1,84 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>SecureShellCheck</title>
- </head>
- <body> 
-    <h1>SecureShellCheck</h1>
- <p>A tool to audit and enhance SSH configurations for better security.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSHield - Secure Your SSH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SSHield</h1>
+        <p>A Simple Tool to Audit and Enhance SSH Security</p>
+    </header>
+    <main>
+        <h2>About SSHield</h2>
+        <p>SSHield is a lightweight bash script designed to help system administrators audit and improve their SSH configurations. The tool checks for common vulnerabilities and suggests fixes to strengthen your server's security.</p>
+
+        <h2>How to Use</h2>
+        <ol>
+            <li>Download the script from the <a href="https://github.com/your-username/SSHield">GitHub repository</a>.</li>
+            <li>Make it executable using the command: <code>chmod +x SSHeild.sh</code></li>
+            <li>Run the script with: <code>./SSHeild.sh</code></li>
+        </ol>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Checks for root login permissions.</li>
+            <li>Verifies if password authentication is enabled.</li>
+            <li>Ensures SSH Protocol 2 is used.</li>
+        </ul>
+
+        <h2>Contribute</h2>
+        <p>If you have ideas to improve SSHield, feel free to contribute by creating an issue or submitting a pull request on our <a href="https://github.com/your-username/SSHield">GitHub repository</a>.</p>
+    </main>
+    <footer>
+        <p>© 2025 SSHield | Built with 💚 for secure systems</p>
+    </footer>
 </body>
- </html>
-
-
+</html>
